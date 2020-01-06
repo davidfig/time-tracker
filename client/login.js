@@ -4,8 +4,7 @@ import { el, listen } from './el'
 import { route } from './'
 
 export function login(fail) {
-    let s = '<div class="login">' +
-        '<div class="login-title">Welcome to Time Tracker!</div>'
+    let s = '<div class="login">'
     if (fail) {
         s += '<div class="login-error">Wrong user or password. Please try again.</div>'
     } else {

@@ -1,0 +1,65 @@
+.time {
+    margin-top: 1rem;
+}
+
+.time-date {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.time-control {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.75rem;
+    justify-content: center;
+}
+
+.time-previous, .time-next, .time-today {
+    padding: 0 1rem;
+    color: gray;
+    cursor: pointer;
+}
+
+.time-week {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted black;
+    width: fit-content;
+}
+
+.time-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-date-calendar {
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.time-week > div {
+    padding: 1rem;
+}
+
+.time-day-box:hover {
+    background: lightgray;
+    cursor: pointer
+}
+
+.time-week > div:not(:last-child) {
+    border-right: 1px dotted gray;
+}
+
+.time-day {
+    color: lightgray;
+}
+
+.time-day-current {
+    background: lightgray;
+}

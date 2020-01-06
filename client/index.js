@@ -1,7 +1,7 @@
 import './index.css'
 import { createFirstUser } from './create-first-user'
 import { login } from './login'
-import { main } from './main'
+import { time } from './time'
 
 function init() {
     fetch(window.location, {
@@ -30,7 +30,7 @@ export function route(data) {
             break
 
         case 'logged-in':
-            main()
+            time()
             break
     }
 }

@@ -16,30 +16,24 @@ function init() {
 }
 
 async function createIfNeeded() {
-    await run(
-        `CREATE TABLE IF NOT EXISTS users (
+    await run(`CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name INTEGER TEXT,
-            salt TEXT,
-            password TEXT
-        );
-
-        CREATE TABLE IF NOT EXISTS clients (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name INTEGER TEXT
-        );
-
-        CREATE TABLE IF NOT EXISTS time (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user INTEGER ,
-            client INTEGER,
-            start INTEGER ,
-            end INTEGER,
-            date INTEGER,
-            duration INTEGER,
-            description TEXT
-        )`
-    )
+        name INTEGER TEXT,
+        salt TEXT,
+        password TEXT)`)
+    await run(`CREATE TABLE IF NOT EXISTS clients (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name INTEGER TEXT)`)
+    await run(`CREATE TABLE IF NOT EXISTS time (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user INTEGER ,
+        client INTEGER,
+        start INTEGER ,
+        end INTEGER,
+        date INTEGER,
+        duration INTEGER,
+        description TEXT
+    )`)
 }
 
 function get(query, values) {
@@ -72,10 +66,23 @@ function run(query, values) {
     })
 }
 
+function all(query, values) {
+    return new Promise((resolve, reject) => {
+        _db.all(query, values, function (err, response) {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(response)
+            }
+        })
+    })
+}
+
 module.exports = {
     init,
     createIfNeeded,
     get,
     run,
+    all,
     getLastId
 }

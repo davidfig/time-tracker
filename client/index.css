@@ -26,3 +26,13 @@ button:hover {
 button:disabled {
     color: rgb(180,180,180)
 }
+
+.masthead {
+    font-size: 1.75rem;
+    padding: 1rem;
+    border-bottom: 1px dotted black;
+}
+
+.content {
+    margin: 1rem;
+}

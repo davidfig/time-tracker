@@ -6,7 +6,6 @@ import { route } from './'
 export function createFirstUser() {
     const s =
         '<div class="first-user">' +
-        '<div class="first-user-title">Welcome to Time Tracker!</div>' +
         '<div class="first-user-description">Since you\'re the first user, please create an account to start tracking your time.</div>' +
         '<input type="text" class="user" name="username" placeholder="Username">' +
         '<input type="password" class="password" placeholder="Password">' +
