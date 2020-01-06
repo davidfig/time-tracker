@@ -1,0 +1,13 @@
+{
+    "server": "http://localhost:4560",
+    "_server": "name of server",
+
+    "port": 4560,
+    "_port": "port to run server",
+
+    "database": "db.sqlite",
+    "_database": "name of database",
+
+    "forceLogin": 1,
+    "_forceLogin": "force a log in with this userID (no password required)"
+}

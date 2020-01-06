@@ -1,0 +1,30 @@
+{
+  "name": "time-tracker",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfig/time-tracker.git"
+  },
+  "author": "David Figatner <david@yopeyopey.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidfig/time-tracker/issues"
+  },
+  "homepage": "https://github.com/davidfig/time-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "clicked": "^3.0.0",
+    "crypto-random-string": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "js-datepicker": "^5.2.1",
+    "parcel-bundler": "^1.12.4",
+    "sqlite3": "^4.1.1"
+  }
+}
