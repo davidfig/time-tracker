@@ -1,7 +1,7 @@
 # time-tracker
 A self-hosted Time Tracker using node.js, sqlite3, and HTML5.
 
-Currently very much WIP.
+Currently a work in progress.
 
 ## Installation
 1. `git clone git@github.com:davidfig/time-tracker.git`

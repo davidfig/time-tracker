@@ -1,3 +1,13 @@
+.qs-datepicker-container {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+}
+
+.time-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .time {
     margin-top: 1rem;
 }
@@ -12,23 +22,21 @@
     display: flex;
     flex-direction: row;
     font-size: 1.75rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .time-previous, .time-next, .time-today {
-    padding: 0 1rem;
     color: gray;
     cursor: pointer;
 }
 
 .time-week {
-    margin: 1rem auto;
+    margin: 0.5rem auto 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border: 1px dotted black;
-    width: fit-content;
+    border: 0.5px dotted black;
 }
 
 .time-date {
@@ -43,8 +51,11 @@
     cursor: pointer;
 }
 
-.time-week > div {
-    padding: 1rem;
+.time-day-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .time-day-box:hover {
@@ -52,14 +63,32 @@
     cursor: pointer
 }
 
-.time-week > div:not(:last-child) {
-    border-right: 1px dotted gray;
+.time-day-box:not(:last-child) {
+    padding: 0.75rem 0;
+    border-right: 0.5px dotted gray;
 }
 
 .time-day {
     color: lightgray;
 }
 
+.time-day-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+
 .time-day-current {
     background: lightgray;
+}
+
+@media screen and (max-width: 800px) {
+    .time-week {
+        margin: 0.5rem 0 1rem
+    }
+
+    .time-day-total-label {
+        display: none;
+    }
 }

@@ -28,11 +28,43 @@ button:disabled {
 }
 
 .masthead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.75rem;
     padding: 1rem;
     border-bottom: 1px dotted black;
 }
 
+.masthead-menu {
+    cursor: pointer;
+}
+
+.masthead-menu-mobile {
+    display: none;
+}
+
+.masthead-menu-mobile > div {
+    padding-bottom: 2rem;
+}
+
 .content {
     margin: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        margin: 0
+    }
+
+    .masthead-menu-mobile {
+        position: absolute;
+        padding: 1.5rem 2rem 0;
+        background: white;
+        border-left: 0.75px dotted black;
+        border-bottom: 0.75px dotted black;
+        right: 0;
+        top: 4.5rem;
+    }
 }
