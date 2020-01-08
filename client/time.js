@@ -1,5 +1,6 @@
 import * as luxon from 'luxon'
 import datePicker from 'js-datepicker'
+import { FallDown } from 'falldown'
 import { clicked } from 'clicked'
 import { el } from './el'
 import '../node_modules/js-datepicker/dist/datepicker.min.css'
@@ -24,7 +25,8 @@ function update() {
         body: JSON.stringify({ type: 'get-time', time: _current.toMillis() })
     }).then(response => response.json()).then(data => {
         let entries = '<div class="time-entry time-entry-edit">' +
-            '<input type=" class="time-entry-edit-description"'
+            `<div class="time-entry-edit-client"></div>` +
+            '<label>Description: <input type="text"></label>'
             '</div>'
         let total = 0
         for (let i = 1; i < 8; i++) {
@@ -43,6 +45,15 @@ function update() {
         }
         el('.time-entries').innerHTML = entries
         el('.time-total').innerHTML = total
+        const clients = new FallDown({
+            parent: el('.time-entry-edit-client'),
+            label: 'Client: ',
+            options: [
+                'test1',
+                'test2'
+            ],
+            addCSS: true
+        })
     })
 }
 

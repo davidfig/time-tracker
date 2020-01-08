@@ -1363,6 +1363,11 @@ clicked@^3.0.0:
   resolved "https://registry.yarnpkg.com/clicked/-/clicked-3.0.0.tgz#99b69d6fa093d86a042b0a680439b1408422186b"
   integrity sha512-9Bs4Jfo4/cS50E+zWbb47MAjdL+eB24lsU02tDvAVwn7tL4+bcGhk48ZUh17V9r2hxRokcYdp986o+eLt/SvTQ==
 
+clicked@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/clicked/-/clicked-3.1.0.tgz#c38c5e2fdef85d6ac3860283b4d1fdcd356e9100"
+  integrity sha512-GZz77QGJF4Lv0jz4NT4lJs9K4zlhg9Fj2CGSTx/NU99kBeO8Im+95GFnXsOopBrQHyB7ETUrdXYbC00NJOvRRA==
+
 cliui@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-5.0.0.tgz#deefcfdb2e800784aa34f46fa08e06851c7bbbc5"
@@ -2151,6 +2156,11 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+eventemitter3@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
+  integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
+
 events@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/events/-/events-3.0.0.tgz#9a0a0dfaf62893d92b875b8f2698ca4114973e88"
@@ -2280,6 +2290,14 @@ falafel@^2.1.0:
     foreach "^2.0.5"
     isarray "0.0.1"
     object-keys "^1.0.6"
+
+falldown@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/falldown/-/falldown-0.10.2.tgz#bc3d5fdc031eb77d5fd9574f1da8bdbc8465e289"
+  integrity sha512-7MD0MU5mQZurT6+grH7KH0RvwbtZ3+0acGWMNuKgkPDHQhSALJQuyNCHF3KjuW5cEc8IUGlDDq+3wiLXIVq0+Q==
+  dependencies:
+    clicked "^3.1.0"
+    eventemitter3 "^3.1.2"
 
 fast-deep-equal@^2.0.1:
   version "2.0.1"
