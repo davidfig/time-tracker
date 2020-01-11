@@ -17,17 +17,24 @@ function init() {
 
 async function createIfNeeded() {
     await run(`CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name INTEGER TEXT,
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
         salt TEXT,
         password TEXT)`)
     await run(`CREATE TABLE IF NOT EXISTS clients (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name INTEGER TEXT)`)
+        userId INTEGER,
+        name TEXT
+    )`)
+    await run(`CREAT TABLE IF NOT EXISTS projects (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        teamId INTEGER,
+        name TEXT
+    )`)
     await run(`CREATE TABLE IF NOT EXISTS time (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        user INTEGER ,
-        client INTEGER,
+        userId INTEGER,
+        clientId INTEGER,
         start INTEGER ,
         end INTEGER,
         date INTEGER,
