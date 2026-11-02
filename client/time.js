@@ -3,7 +3,7 @@ import datePicker from 'js-datepicker'
 import { FallDown } from 'falldown'
 import { clicked } from 'clicked'
 import { el } from './el'
-import '../node_modules/js-datepicker/dist/datepicker.min.css'
+import 'js-datepicker/dist/datepicker.min.css'
 import './time.css'
 
 let _current, _picker

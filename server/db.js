@@ -26,7 +26,7 @@ async function createIfNeeded() {
         userId INTEGER,
         name TEXT
     )`)
-    await run(`CREAT TABLE IF NOT EXISTS projects (
+    await run(`CREATE TABLE IF NOT EXISTS projects (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         teamId INTEGER,
         name TEXT
