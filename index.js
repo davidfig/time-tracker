@@ -1,18 +1,17 @@
 const express = require('express')
 const session = require('express-session')
-const randomString = require('crypto-random-string')
-const bodyParser = require('body-parser')
+const crypto = require('crypto')
 const parcel = require('./server/parcel')
 const path = require('path')
 const db = require('./server/db')
 const post = require('./server/post')
 const app = express()
 
-const secret = randomString({ length: 20 })
+const secret = crypto.randomBytes(20).toString('hex')
 
 async function init() {
 
-    app.use(bodyParser.json({ extended: true }))
+    app.use(express.json())
     app.use(session({
         secret,
         resave: true,
@@ -26,7 +25,7 @@ async function init() {
     await db.init()
     await db.createIfNeeded()
 
-    parcel()
+    await parcel()
 
     const server = app.listen(port, () => console.log(`🕒 davidfig/time-tracker listening at https://localhost:${port}`))
     server.keepAliveTimeout = 0

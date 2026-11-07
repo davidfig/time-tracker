@@ -18,15 +18,13 @@
   },
   "homepage": "https://github.com/davidfig/time-tracker#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "clicked": "^3.0.0",
-    "crypto-random-string": "^3.0.1",
-    "express": "^4.17.1",
-    "express-session": "^1.17.0",
+    "clicked": "^4.0.3",
+    "esbuild": "^0.28.2",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
     "falldown": "^0.10.2",
-    "js-datepicker": "^5.2.1",
-    "luxon": "^1.21.3",
-    "parcel-bundler": "^1.12.4",
-    "sqlite3": "^4.1.1"
+    "js-datepicker": "^5.18.4",
+    "luxon": "^3.7.2",
+    "sqlite3": "^6.0.1"
   }
 }
