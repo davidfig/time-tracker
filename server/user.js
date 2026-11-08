@@ -17,11 +17,12 @@ async function create(req, res) {
 }
 
 async function login(req, res) {
-    const user = await db.get('SELECT salt, password FROM users WHERE name=?', [req.body.user])
+    const user = await db.get('SELECT id, salt, password FROM users WHERE name=?', [req.body.user])
     if (user) {
         const hash = crypto.createHmac('sha512', user.salt)
         hash.update(req.body.password)
         if (hash.digest('hex') === user.password) {
+            req.session.userId = user.id
             res.send(JSON.stringify({ type: 'logged-in' }))
         } else {
             res.send(JSON.stringify({ type: 'login-fail'}))
